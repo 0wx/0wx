@@ -1,4 +1,4 @@
-import { faDev, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
+import { faDev, faGithub, faMedium, faNpm } from '@fortawesome/free-brands-svg-icons'
 import {
   faBook,
   faEnvelope,
@@ -79,7 +79,7 @@ export const project: Project[] = [
     font: faBook,
     title: 'gameoflife.js',
     description: "JavaScript Library for John Conway's popular Game of Life",
-    url: 'https://github.com/0wx/medium-scrape',
+    url: 'https://github.com/0wx/gameoflife.js',
     language: 'TypeScript',
     color: '#2b7489',
   },
@@ -97,7 +97,7 @@ export const project: Project[] = [
     title: 'medium-scrape',
     description: 'JavaScript Library to get content from medium.com',
     url: 'https://github.com/0wx/medium-scrape',
-    language: 'TypeScript',
+    language: 'JavaScript',
     color: '#f1e05a',
   },
   {
@@ -105,7 +105,7 @@ export const project: Project[] = [
     title: 'imgbox',
     description:
       '📂 Unofficial library to upload multiple images to imgbox.com',
-    url: 'https://github.com/0wx/medium-scrape',
+    url: 'https://github.com/0wx/imgbox',
     language: 'TypeScript',
     color: '#2b7489',
   },
@@ -135,6 +135,14 @@ export const project: Project[] = [
     language: 'TypeScript',
     color: '#2b7489',
   },
+  {
+    font: faBook,
+    title: '0wx.github.io',
+    description: 'My personal portofolio website',
+    url: 'https://github.com/0wx/0wx.github.io',
+    language: 'TypeScript',
+    color: '#2b7489',
+  },
 ]
 
 interface Link {
@@ -155,5 +163,12 @@ export const link: Link[] = [
     logo: faDev,
     url: 'https://dev.to/0wx',
   },
-  { logo: faEnvelope, url: 'mailto:hai@0wx.dev' },
+  { 
+    logo: faNpm, 
+    url: 'https://www.npmjs.com/~0wx' 
+  },
+  { 
+    logo: faEnvelope, 
+    url: 'mailto:hai@0wx.dev' 
+  },
 ]
