@@ -14,7 +14,7 @@ function App() {
             <img
               width="100px"
               height="100px"
-              src="/profile.png"
+              src="/images/profile.png"
               alt="Gilang Ramadhan"
             />
             <div className={style.greet}>
