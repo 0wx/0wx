@@ -88,7 +88,7 @@ export const project: Project[] = [
     title: 'seed-to-color',
     description:
       'JavaScript Library for Generating random Color using seed that you prefered',
-    url: 'https://github.com/0wx/medium-scrape',
+    url: 'https://github.com/0wx/seed-to-color',
     language: 'TypeScript',
     color: '#2b7489',
   },
