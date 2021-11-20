@@ -1,4 +1,12 @@
-import { faDev, faGithub, faMedium, faNpm } from '@fortawesome/free-brands-svg-icons'
+import {
+  faDev,
+  faGithub,
+  faMedium,
+  faNpm,
+  faKeybase,
+  faHackerNews,
+  faGitlab,
+} from '@fortawesome/free-brands-svg-icons'
 import {
   faBook,
   faEnvelope,
@@ -156,6 +164,10 @@ export const link: Link[] = [
     url: 'https://github.com/0wx',
   },
   {
+    logo: faNpm,
+    url: 'https://www.npmjs.com/~0wx',
+  },
+  {
     logo: faMedium,
     url: 'https://0wx.medium.com',
   },
@@ -163,12 +175,20 @@ export const link: Link[] = [
     logo: faDev,
     url: 'https://dev.to/0wx',
   },
-  { 
-    logo: faNpm, 
-    url: 'https://www.npmjs.com/~0wx' 
+  {
+    logo: faHackerNews,
+    url: 'https://news.ycombinator.com/user?id=0wx',
   },
-  { 
-    logo: faEnvelope, 
-    url: 'mailto:hai@0wx.dev' 
+  {
+    logo: faGitlab,
+    url: 'https://gitlab.com/0wx',
+  },
+  {
+    logo: faKeybase,
+    url: 'https://keybase.io/00wx',
+  },
+  {
+    logo: faEnvelope,
+    url: 'mailto:hai@0wx.dev',
   },
 ]
