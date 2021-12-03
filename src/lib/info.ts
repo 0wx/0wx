@@ -51,11 +51,18 @@ export const techStack: TechStack[] = [
     line: 90,
   },
   {
+    title: 'Saas',
+    logo: '/images/min-sass.png',
+    width: 18,
+    height: 20,
+    line: 92,
+  },
+  {
     title: 'MongoDB',
     logo: '/images/min-mongo.png',
     width: 6.7,
     height: 20,
-    line: 90,
+    line: 95,
   },
   {
     title: 'NodeJs',
