@@ -119,7 +119,7 @@ export const project: Project[] = [
     font: faBook,
     title: 'imgbox',
     description:
-      '📂 Unofficial library to upload multiple images to imgbox.com',
+      'Unofficial library to upload multiple images to imgbox.com',
     url: 'https://github.com/0wx/imgbox',
     language: 'TypeScript',
     color: '#2b7489',
@@ -152,9 +152,9 @@ export const project: Project[] = [
   },
   {
     font: faBook,
-    title: 'portofolio',
-    description: 'My personal portofolio website',
-    url: 'https://github.com/0wx/portofolio',
+    title: 'portfolio',
+    description: 'My personal portfolio website',
+    url: 'https://github.com/0wx/portfolio',
     language: 'TypeScript',
     color: '#2b7489',
   },
