@@ -1,7 +1,7 @@
 {
   "name": "0wx",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
   "homepage": "https://0wx.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
