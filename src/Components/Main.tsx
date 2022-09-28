@@ -23,8 +23,8 @@ export const Main: React.FC = ({ children }) => {
     }
   }, [])
   const add = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const x = Math.floor(event.pageX / 10)
-    const y = Math.floor(event.pageY / 10)
+    const x = Math.floor(event.clientX / 10)
+    const y = Math.floor(event.clientY / 10)
     if (game) game.add(getArrow(x, y))
   }
   return (
