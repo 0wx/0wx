@@ -118,8 +118,7 @@ export const project: Project[] = [
   {
     font: faBook,
     title: 'imgbox',
-    description:
-      'Unofficial library to upload multiple images to imgbox.com',
+    description: 'Unofficial library to upload multiple images to imgbox.com',
     url: 'https://github.com/0wx/imgbox',
     language: 'TypeScript',
     color: '#2b7489',

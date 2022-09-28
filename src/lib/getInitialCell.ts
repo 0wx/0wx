@@ -69,6 +69,58 @@ export const getRandomArrow = (props: Props) => {
     return result
   })
 }
+export const getArrow = (x: number, y: number) => {
+  const isLeft = Math.random() > 0.5
+  if (isLeft) {
+    return Array.from(Array(5), (_, i) => {
+      const result = {
+        width: Math.max(x, 2),
+        height: y,
+      }
+
+      switch (i) {
+        case 1:
+          result.width = result.width + 1
+          break
+        case 2:
+          result.width = result.width + 2
+          break
+        case 3:
+          result.width = result.width + 2
+          result.height = result.height + 1
+          break
+        case 4:
+          result.width = result.width + 1
+          result.height = result.height + 2
+          break
+      }
+      return result
+    })
+  }
+  return Array.from(Array(5), (_, i) => {
+    const result = {
+      width: x,
+      height: y,
+    }
+
+    switch (i) {
+      case 1:
+        result.width = result.width + 1
+        break
+      case 2:
+        result.width = result.width + 2
+        break
+      case 3:
+        result.height = result.height + 1
+        break
+      case 4:
+        result.width = result.width + 1
+        result.height = result.height + 2
+        break
+    }
+    return result
+  })
+}
 export const getInitialCell = (props: Props, arrowOnly?: boolean) => {
   // return randomCell(props)
   const { width, height } = props

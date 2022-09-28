@@ -1,12 +1,14 @@
-import GameOfLife from 'gameoflife.js'
 import { useEffect, useRef } from 'react'
-import { getInitialCell, getRandomArrow } from '../lib/getInitialCell'
+import { useGame } from '../hooks/useGame'
+import { getRandomArrow } from '../lib/getInitialCell'
 interface GameProps {
   width: number
   height: number
 }
+
 export default function Game(props: GameProps) {
   const ref = useRef<HTMLCanvasElement>(null)
+  const { game } = useGame()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const change = (
     cells: number[][],
@@ -17,6 +19,7 @@ export default function Game(props: GameProps) {
   ) => {
     if (ref.current) {
       const context = ref.current.getContext('2d')
+
       if (context)
         for (let i = 0; i < data.height; i++) {
           for (let j = 0; j < data.width; j++) {
@@ -30,20 +33,24 @@ export default function Game(props: GameProps) {
     }
   }
   useEffect(() => {
-    const data = {
-      width: Math.floor(props.width / 10),
-      height: Math.floor(props.height / 10),
+    if (game) {
+      const data = {
+        width: Math.floor(window.innerWidth / 10),
+        height: Math.floor(window.innerHeight / 10),
+      }
+      change(game.cells, data)
+      const interval = setInterval(
+        () => change(game.add(getRandomArrow(data)), data),
+        15000
+      )
+      const gameInterval = setInterval(() => change(game.next(), data), 100)
+      return () => {
+        clearInterval(interval)
+        clearInterval(gameInterval)
+        window.location.reload()
+      }
     }
-    const game = new GameOfLife({
-      ...data,
-      initialCell: getInitialCell(data),
-    })
-
-    change(game.cells, data)
-    setInterval(() => change(game.add(getRandomArrow(data)), data), 15000)
-    setInterval(() => change(game.next(), data), 100)
-    return clearInterval
-  }, [props, change])
+  }, [game, change])
 
   return <canvas ref={ref} width={props.width} height={props.height} />
 }
